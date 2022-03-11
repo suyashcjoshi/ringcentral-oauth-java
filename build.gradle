@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+apply plugin: 'application'
+
+group 'com.ringcentral'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation group: 'com.ringcentral', name: 'ringcentral', version: '2.8.2'
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.79'
+    implementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '11.0.8'
+}
+
+mainClassName = "WebApp"
+
+test {
+    useJUnitPlatform()
+}
