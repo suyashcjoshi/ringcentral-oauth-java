@@ -1,5 +1,5 @@
 # ringcentral-oauth-java
-Demo application showing 3-legged OAuth 2.0 Flow for RingCentral platform using Java Web server.
+Demo application showing 3-legged OAuth 2.0 Flow for RingCentral platform using Java Web server (Jetty).
 
 In general, the steps your app needs to take to use RingCentral APIs (including authorization) are as follows:
 
@@ -10,10 +10,17 @@ In general, the steps your app needs to take to use RingCentral APIs (including 
 
 ### Pre-requisites:
 
-1. JDK 11
-2. RingCentral [Java SDK](https://mvnrepository.com/artifact/com.ringcentral/ringcentral)
-3. RingCentral Account (If you don't have one, you can create for free: https://www.ringcentral.com/signup.html)
+1. RingCentral Account (If you don't have one, you can create for free: https://www.ringcentral.com/signup.html)
 4. RingCentral Developer Application. Get started creating a simple application by following this step by step guide: https://developers.ringcentral.com/guide/basics/create-app
+5. Select OAuth for authentication and set `http://localhost:5000/oauth2callback` as the OAuth Redirect URI.
+
+
+### Project Dependencies (build.gradle): It is advised to update the following dependencies to the latest versions.
+
+1. JDK 11 or above
+2. RingCentral Java SDK
+2. Ecplise Jetty Server
+3. Fastjson Library
 
 
 ### Setup:
@@ -28,7 +35,9 @@ In general, the steps your app needs to take to use RingCentral APIs (including 
 ```
 5. Run `./gradlew build` to install the dependencies and compile and app
 6. After successful execution and compilation, start the application server via gradle `./gradlew run `
-7. Open **localhost:5000** and you will see **Login using RingCentral Account** link, click that and follow the wizard to login using your RingCentral Account.
+7. By default the server  **localhost:5000** and you will see **Login using RingCentral Account** link, click that and follow the wizard to login using your RingCentral Account.
+
+
 8. Once you're logged in, you should be able to see options to call other RingCentral APIs such as to "Read Call Logs", "Extension Info" etc. This is done for the user who authorized the web app using OAuth 2.0 auth code flow.
 
 
