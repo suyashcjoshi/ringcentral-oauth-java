@@ -35,7 +35,7 @@ In general, the steps your app needs to take to use RingCentral APIs (including 
 ```
 5. Run `./gradlew build` to install the dependencies and compile and app
 6. After successful execution and compilation, start the application server via gradle `./gradlew run `
-7. By default the server  **localhost:5000** and you will see **Login using RingCentral Account** link, click that and follow the wizard to login using your RingCentral Account.
+7. Open your browser to **localhost:5000** and you will see **Login using RingCentral Account** link, click that and follow the wizard to login using your RingCentral Account.
 
 
 8. Once you're logged in, you should be able to see options to call other RingCentral APIs such as to "Read Call Logs", "Extension Info" etc. This is done for the user who authorized the web app using OAuth 2.0 auth code flow.
