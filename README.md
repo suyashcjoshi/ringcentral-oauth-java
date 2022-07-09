@@ -27,7 +27,7 @@ In general, the steps your app needs to take to use RingCentral APIs (including 
 
 1. Clone/Download this GitHub project
 2. Open the project in your favorate Java IDE and navigate to WebApp.java.
-3. Enter the values for the following two variables from your RingCentral Developer Application Settings (Sandbox Credentials) :
+3. Enter the values for the following two variables from your RingCentral Developer Application Settings - Sandbox Credentials. Optionally you can use Production Credentials as long as you change the `SERVER URL` field :
 
 ```java
   private static String CLIENT_ID = "RINGCENTRAL_APP_CLIENT_ID";
